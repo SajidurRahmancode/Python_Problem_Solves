@@ -1,9 +1,15 @@
-for num in range (2,20+1):
-      for i in range(2, num):
-    if (num % i) == 0:
-      x=0
-      break
-    else: 
-      x=1
-  if (x==1):
-    print(num, "is prime")
+def prime(n,i=2):
+    if n<=1:
+        return False
+    if i * i > n: 
+            return True
+    if n%i==0:
+            print(n)
+            return False
+    
+    return prime(n,i+1) 
+
+
+
+print(prime(15))
+
